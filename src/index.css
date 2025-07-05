@@ -54,11 +54,6 @@ button {
   gap: 5px;
   border-radius: 3px;
   transition: .2s;
-
-  &:hover {
-    background-color: var(--back);
-    color: var(--color);
-  }
 }
 
 
@@ -208,10 +203,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .page {
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw !important;
-  min-height: 100vh !important;
+  width: 100dvw;
+  height: 100dvh;
+  min-width: 100dvw !important;
+  min-height: 100dvh !important;
   overflow-x: hidden !important;
 }
 
@@ -252,7 +247,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   left: 0;
   z-index: 3;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   min-width: 100dvw;
   min-height: 100dvh;
   transition: .3s, top 0s !important;

@@ -1,0 +1,306 @@
+.page.home[colormode="false"] {
+    .servicos {
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            h2 {
+                color: white;
+                font-weight: 550;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: .9rem;
+            }
+        }
+
+        .list {
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                color: white;
+                border-radius: 5px;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.434);
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+                transition: .2s;
+                background-color: rgba(0, 2, 31, 0.771);
+
+
+                h3 {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+
+                    svg {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                &:hover {
+                    scale: 1.01;
+                }
+            }
+        }
+
+        nav.contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            h3 {
+                font-weight: 450;
+                text-align: center;
+                width: 100%;
+                max-width: 800px;
+            }
+
+            form {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+
+                textarea {
+                    width: 100%;
+                    min-height: 100px;
+                    font-size: 1rem;
+                    padding: 10px;
+                    border-radius: 5px;
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.146);
+                    background-color: rgb(255, 255, 255);
+                }
+
+                button {
+                    padding: 10px;
+                    font-size: .8rem;
+                    gap: 10px;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0px;
+
+                    --color: white;
+                    --back: rgb(0, 149, 67);
+
+                    svg {
+                        transition: initial
+                    }
+                }
+            }
+        }
+    }
+
+    .projetos {
+        .list {
+            div.card {
+                background-color: rgb(14, 0, 42);
+                color: white;
+                border: none;
+
+                nav {
+
+                    background-color: inherit;
+                    box-shadow: 0 0 5px inherit;
+                    border-bottom-left-radius: 5px;
+
+                    svg {
+
+                        border-radius: 50%;
+                        background-color: rgb(0, 21, 255);
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.494);
+                        color: white;
+                        transition: .2s;
+
+                        &:hover {
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        .content {
+            color: white;
+
+            nav {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    font-weight: 600;
+                    color: white;
+                    padding: 10px;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+
+    .download-cv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.379);
+
+        &[open] .content {
+            animation: var(--show-top);
+        }
+
+        .content {
+            width: calc(100% - 20px);
+            max-width: 500px;
+            font-family: "Inter", sans-serif;
+            background-color: rgb(65, 65, 201);
+
+            color: white;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.672);
+            padding: 10px;
+            border-radius: 5px;
+
+            .head {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                h2 {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                    font-size: 1.3rem;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 80%;
+                    min-width: max-content;
+                    color: rgb(255, 255, 255);
+                    margin-block: 30px;
+                    background-color: rgb(29, 44, 130);
+                    padding: 20px;
+                    border-radius: 5px;
+                }
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 20px;
+                width: 100%;
+
+
+                button {
+                    background-color: blue;
+                    color: white;
+                    --color: blue;
+                    --back: white;
+
+                    &:first-child {
+                        background-color: red;
+                        --color: red;
+
+                    }
+
+                    a {
+                        display: flex;
+                        gap: 15px;
+                        padding: 10px;
+                        font-size: 1.2rem;
+                        color: inherit;
+                        transition: .2s;
+
+                        svg {
+                            transition: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal.view-project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+
+            .main {
+                .slide-imgs {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 10px;
+
+                    .item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        max-width: 900px;
+                        min-height: 56.22%;
+                        display: none;
+
+                        &[view="true"] {
+                            display: flex;
+                        }
+
+                        img {
+                            width: 100%;
+                            min-height: 56.22%;
+                        }
+                    }
+
+                    &+nav {
+                        display: flex;
+                        justify-content: center;
+                        padding: 10px;
+                        gap: 10px;
+
+                        button {
+                            border-radius: 50%;
+                            padding: 5px;
+                            background-color: rgb(255, 255, 255);
+                            border: solid 2px black;
+
+                            &[selected="true"] {
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
